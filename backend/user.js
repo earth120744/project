@@ -6,10 +6,10 @@ const speakeasy = require('speakeasy');
 const { count } = require('rxjs');
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
+  user: 'admin',
+  host: '34.87.150.22',
   database: 'postgres',
-  password: 'earth2001',
+  password: '12345',
 });
 
 // router.post('/login', (req, res) => {
