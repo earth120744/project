@@ -8,15 +8,11 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  login(user_name:any, user_password:any) {
-    return this.http.post<any>('http://localhost:3000/api/login', {user_name, user_password})
+  login(user_name: any, user_password: any) {
+    return this.http.post<any>('http://localhost:3000/api/login', { user_name, user_password });
   }
 
-  sendOtp(email: string) {
-    return this.http.post<any>('http://localhost:3000/api/mail', { email });
+  verifyOTP(email: string, otp: string, secret: string) {
+    return this.http.post<any>('http://localhost:3000/api/otp', { email, otp, secret });
   }
-
-  // post(email:any, username:any, password:any) {
-  //   return this.http.post('http://localhost:3000/api/signup', {email:email, username:username, password:password})
-  // }
 }
