@@ -1,0 +1,17 @@
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <label>Email:</label>
+            <input type="text" formControlName="user_email">
+
+            <label>Username:</label>
+            <input type="text" formControlName="user_name">
+
+            <label>Password:</label>
+            <input type="password" formControlName="user_password">
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>

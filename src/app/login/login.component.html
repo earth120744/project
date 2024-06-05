@@ -1,0 +1,21 @@
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form [formGroup]="Loginform">
+            <label>Username:</label>
+            <input type="text" formControlName="user_name">
+            <label>Password:</label>
+            <input type="password" formControlName="user_password">
+            <button type="submit" (click)="showModal()">Login</button>
+            <nz-modal [(nzVisible)]="isVisible" nzTitle="Enter the OTP code we just texted you" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Confirm" nzCancelText="Cancel">
+                <ng-container *nzModalContent>
+                    <form>
+                        <p>OTP</p>
+                        <input type="text">
+                    </form>
+                </ng-container>
+            </nz-modal>
+        </form><br>
+        <p>Don't have an account yet? <a [routerLink]="['/signup']">Click here</a> to sign up</p>
+    </div>
+</body>

@@ -1,0 +1,20 @@
+.login {
+    background-color: gray; 
+    height: 50px; 
+    width: 80px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.signup {
+    background-color: mediumslateblue; 
+    height: 50px; 
+    width: 80px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+}
